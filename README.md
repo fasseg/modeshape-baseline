@@ -1,3 +1,7 @@
+This project creates an executable jar that starts a Modeshape Server. If the bench (-b) option is set a Modeshape Server is started which starts an internal benchmarking process.
+This of course only tests a non load balanced scenario, but it does demonstrate the write performance of a single node in a clustered environment.
+
+
 Usage
 ---
 ```
