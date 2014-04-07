@@ -1,5 +1,22 @@
 Usage
 ---
+```
+ -b,--bench                       Enable the running the benchmark on this
+                                  node
+ -h,--help                        print the help screen
+ -l,--log <log>                   The log file to which the durations will
+                                  get written. [default=durations.log]
+ -n,--num-actions <num-actions>   The number of actions performed.
+                                  [default=1]
+ -s,--size <size>                 The size of the individual binaries
+                                  used. Sizes with a k,m,g or t postfix
+                                  will be interpreted as kilo-, mega-,
+                                  giga- and terabyte [default=1024]
+ -t,--num-threads <num-threads>   The number of threads used for
+                                  performing all actions. [default=1]
+```
+Example
+---
 
 Build the executable jar using
 
