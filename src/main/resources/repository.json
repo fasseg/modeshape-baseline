@@ -1,0 +1,24 @@
+{
+    "name" : "repo",
+    "jndiName" : "",
+    "workspaces" : {
+        "predefined" : ["default"],
+        "default" : "default",
+        "allowCreation" : true
+    },
+    "clustering" : {
+        "clusterName" : "modeshape-cluster"
+    },
+    "query" : {
+        "enabled" : false,
+    },
+    "storage" : {
+        "cacheName" : "FedoraRepository",
+        "cacheConfiguration" : "infinispan.xml",
+        "binaryStorage" : {
+            "type" : "cache",
+            "dataCacheName" : "FedoraRepositoryBinaryData",
+            "metadataCacheName" : "FedoraRepositoryMetaData"
+        }
+    }
+}
