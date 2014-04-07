@@ -121,6 +121,7 @@ public class ModeshapeServer {
         ops.addOption(OptionBuilder.withDescription(
                 "Enable the running the benchmark on this node").withLongOpt("bench")
                 .create('b'));
+        ops.addOption("h", "help", false, "print the help screen");
         return ops;
     }
 

@@ -36,20 +36,22 @@ public class BenchTool {
     public void runBenchMark(Repository repo, int num, long size, int threads) throws Exception {
         final ExecutorService executorService = Executors.newFixedThreadPool(threads);
         List<Future<Result>> futs = new ArrayList<Future<Result>>();
+        long duration = System.currentTimeMillis();
         for (int i = 0; i < num; i++) {
             futs.add(executorService.submit(new Ingester(size, repo)));
         }
-        long sumDurations = 0l;
+
         long sumSizes = 0l;
         for (Future<Result> f : futs) {
             Result res = f.get();
-            sumDurations += res.getDuration();
             sumSizes += res.getSize();
         }
+        duration = System.currentTimeMillis() - duration;
         log.info("Benchmark finished.");
-        log.info("Overall throughput {} mb/sec", FORMAT.format((float) sumSizes / (float) sumDurations * 1000 / (1024 * 1024)));
+        log.info("-----------Overall results--------");
+        log.info("Overall throughput {} mb/sec", FORMAT.format((float) sumSizes / (float) duration * 1000 / (1024 * 1024)));
         log.info("Overall size {}", convertSize(sumSizes));
-        log.info("Overall duration {} secs", sumDurations/1000l);
+        log.info("Overall duration {} secs", FORMAT.format((float) duration / (float) 1000l));
     }
 
     public static String convertSize(final long size) {
