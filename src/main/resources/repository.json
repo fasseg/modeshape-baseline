@@ -13,12 +13,12 @@
         "enabled" : false,
     },
     "storage" : {
-        "cacheName" : "FedoraRepository",
+        "cacheName" : "MyRepository",
         "cacheConfiguration" : "infinispan.xml",
         "binaryStorage" : {
             "type" : "cache",
-            "dataCacheName" : "FedoraRepositoryBinaryData",
-            "metadataCacheName" : "FedoraRepositoryMetaData"
+            "dataCacheName" : "MyRepositoryBinaryData",
+            "metadataCacheName" : "MyRepositoryMetaData"
         }
     }
 }
