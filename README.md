@@ -4,7 +4,9 @@ This of course only tests a non load balanced scenario, but it does demonstrate 
 Configuration
 ---
 [infinispan.xml](https://github.com/fasseg/modeshape-baseline/blob/master/src/main/resources/infinispan.xml)
+
 [jgroups.xml](https://github.com/fasseg/modeshape-baseline/blob/master/src/main/resources/jgroups.xml)
+
 [repository.json](https://github.com/fasseg/modeshape-baseline/blob/master/src/main/resources/repository.json)
 
 Usage
