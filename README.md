@@ -1,6 +1,11 @@
 This project creates an executable jar that starts a Modeshape Server. If the bench (-b) option is set a Modeshape Server is started with an internal benchmarking process.
 This of course only tests a non load balanced scenario, but it does demonstrate the write performance of a single node in a clustered environment.
 
+Configuration
+---
+[https://github.com/fasseg/modeshape-baseline/blob/master/src/main/resources/infinispan.xml](infinispan.xml)
+[https://github.com/fasseg/modeshape-baseline/blob/master/src/main/resources/jgroups.xml](jgroups.xml)
+[https://github.com/fasseg/modeshape-baseline/blob/master/src/main/resources/repository.json](repository.json)
 
 Usage
 ---
